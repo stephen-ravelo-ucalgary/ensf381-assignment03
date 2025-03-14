@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attempt Quiz - LMS</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="attempt_quiz.js"></script>
 </head>
+
 <body>
     <header>
         <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
@@ -14,7 +17,7 @@
     <div>
         <nav>
             <a href="index.html">Homepage</a>
-            <a href="course_view.html">Courses</a> 
+            <a href="course_view.html">Courses</a>
         </nav>
     </div>
     <main class="attemptquiz">
@@ -26,7 +29,9 @@
             <p>Deadline: 11:59 PM, February 10, 2025</p>
             <p>Attempts Allowed: 1</p>
         </div>
-        
+
+        <p id="timer">Timer: 10:00</p>
+
         <h3>Question 1</h3>
         <p>What does HTML stand for?</p>
         <div class="Qs">
@@ -36,19 +41,22 @@
             <label for="q1b">Home Tool Markup Language</label><br>
         </div>
         <br>
-        <button class="ans">Submit Answer</button>
-        
+        <button class="ans" onclick="checkQ1Finished()">Submit Answer</button>
+        <p id="q1Answer"></p>
+
         <h3>Question 2</h3>
         <p>Which of the following are HTML elements? (Select all that apply)</p>
         <div class="Qs">
-        <input type="checkbox" id="q2a" name="q2" value="<div>">
-        <label for="q2a">&lt;div&gt;</label><br>
-        <input type="checkbox" id="q2b" name="q2" value="<span>">
-        <label for="q2b">&lt;span&gt;</label><br>
+            <input type="checkbox" id="q2a" name="q2" value="<div>">
+            <label for="q2a">&lt;div&gt;</label><br>
+            <input type="checkbox" id="q2b" name="q2" value="<span>">
+            <label for="q2b">&lt;span&gt;</label><br>
         </div>
         <br>
-        <button class="ans">Submit Answer</button>
-        
+        <button class="ans" onclick="checkQ2Finished()">Submit Answer</button>
+        <p id="q2Answer"></p>
+        <p id="score"></p>
+
         <br><br>
         <a href="leaderboard.html">
             <button class="FinQz">Finish Quiz</button>
@@ -58,4 +66,5 @@
         <p>&copy; 2025 LMS. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
