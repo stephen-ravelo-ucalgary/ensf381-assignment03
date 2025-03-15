@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <script src="course_view.js"></script>
     <header>
         <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
         <h1>LMS - Learning Management System</h1>
@@ -31,9 +32,9 @@
             <!-- Display Course 1, 2, and 3 in the same line -->
             <h2>Enrolled Courses</h2>
             <hr>
-            <table class="cv">
+            <table class="cv" id="table1">
 				<tr>
-					<td>
+					<td id="course_tile1" onmouseover="highlightTile('course_tile1')" onmouseout="unhighlightTile('course_tile1')">
 						<div>
                             <img src="course1.jpg" alt="Course 1">
                             <p>Course Name: Web Development</p>
@@ -41,7 +42,7 @@
                             <a href="attempt_quiz.html">Attempt Quiz</a>
                         </div>
 					</td>
-					<td>
+					<td id="course_tile2" onmouseover="highlightTile('course_tile2')" onmouseout="unhighlightTile('course_tile2')">
 						<div>
                             <img src="course1.jpg" alt="Course 1">
                             <p>Course Name: Data Structures</p>
@@ -49,7 +50,7 @@
                             <a href="attempt_quiz.html">Attempt Quiz</a>
                         </div>
 					</td>
-                    <td>
+                    <td id="course_tile3" onmouseover="highlightTile('course_tile3')" onmouseout="unhighlightTile('course_tile3')">
 						<div>
                             <img src="course1.jpg" alt="Course 1">
                             <p>Course Name: Database Systems</p>
@@ -59,8 +60,8 @@
 					</td>
 				</tr>
 				<!-- Display Course 4 and 5 in the same line -->
-				<tr>
-					<td>
+				<tr id="table1_row2">
+					<td class="row2" id="course_tile4" onmouseover="highlightTile('course_tile4')" onmouseout="unhighlightTile('course_tile4')">
 						<div>
                             <img src="course1.jpg" alt="Course 1">
                             <p>Course Name: Software Testing</p>
@@ -68,7 +69,7 @@
                             <a href="attempt_quiz.html">Attempt Quiz</a>
                         </div>
 					</td>
-					<td>
+					<td class="row2" id="course_tile5" onmouseover="highlightTile('course_tile5')" onmouseout="unhighlightTile('course_tile5')">
 						<div>
                             <img src="course1.jpg" alt="Course 1">
                             <p>Course Name: Software Architectures</p>
@@ -90,23 +91,23 @@
             <h2>Pending Invitations</h2>
             <hr>
             <table class="cv">
-				<tr>
-					<td>
+				<tr id="table2_row1">
+					<td id="course_tile6" onmouseover="highlightTile('course_tile6')" onmouseout="unhighlightTile('course_tile6')">
                         <div>
                             <img src="course2.jpg" alt="Course 2">
-                            <p>Course Name: Data Science</p>
-                            <p>Course Code: DS102</p>
-                            <button class="accept">Accept</button>
-                            <button class="decline">Decline</button>
+                            <p id="course_name1">Course Name: Data Science</p>
+                            <p id="course_code1">Course Code: DS102</p>
+                            <button class="accept" onclick="acceptCourse('course_tile6')">Accept</button>
+                            <button class="decline" onclick="declineCourse('course_tile6')">Decline</button>
                         </div>
                     </td> 
-                    <td>
+                    <td id="course_tile7" onmouseover="highlightTile('course_tile7')" onmouseout="unhighlightTile('course_tile7')">
                         <div>
                             <img src="course2.jpg" alt="Course 2">
-                            <p>Course Name: Machine Learning</p>
-                            <p>Course Code: ML105</p>
-                            <button class="accept">Accept</button>
-                            <button class="decline">Decline</button>
+                            <p id="course_name2">Course Name: Machine Learning</p>
+                            <p id="course_code2">Course Code: ML105</p>
+                            <button class="accept" onclick="acceptCourse('course_tile7')">Accept</button>
+                            <button class="decline" onclick="declineCourse('course_tile7')">Decline</button>
                         </div>
                     </td> 
                 </tr>
@@ -118,3 +119,4 @@
     </footer>
 </body>
 </html>
+
