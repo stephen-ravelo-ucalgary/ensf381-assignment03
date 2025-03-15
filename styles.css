@@ -102,6 +102,16 @@ main a[href="#"]:hover {
     text-decoration: underline;
 }
 
+main[class="login"] div[class="result"] {
+    margin: 0 100px 0 100px;
+    background-color: f4f4f4;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    text-align: center;
+}
+
 /* Course View */
 main[class="courseview"] {
     padding: 20px;
